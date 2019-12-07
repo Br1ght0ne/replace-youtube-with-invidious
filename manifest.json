@@ -9,6 +9,11 @@
     "webRequest",
     "webRequestBlocking"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "replace-youtube-with-invidious@brightone.space"
+    }
+  },
   "icons": {
     "32": "icons/icon.png"
   },
