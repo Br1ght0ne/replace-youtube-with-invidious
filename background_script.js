@@ -1,14 +1,14 @@
+const redirect = async request => {
+  let { instance } = await browser.storage.sync.get("instance");
+  let url = request.url.replace(
+    /(www\.)?youtu(\.be|be\.com)/,
+    instance || "invidio.us"
+  );
+  return { redirectUrl: url };
+};
+
 browser.webRequest.onBeforeRequest.addListener(
-    request => {
-        let url = request.url.replace(/(www\.)?youtu(\.be|be\.com)/, 'invidio.us');
-        console.log("Redirecting " + request.url + " to " + url)
-        return {redirectUrl: url};
-    },
-    {
-        urls: [
-            "*://www.youtube.com/*",
-            "*://youtu.be/*"
-        ]
-    },
-    ["blocking"]
+  redirect,
+  { urls: ["*://www.youtube.com/*", "*://youtu.be/*"] },
+  ["blocking"]
 );

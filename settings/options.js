@@ -1,23 +1,14 @@
-function saveOptions(e) {
+const saveOptions = async e => {
   e.preventDefault();
-  browser.storage.sync.set({
+  await browser.storage.sync.set({
     instance: document.querySelector("#instance").value
   });
-}
+};
 
-function restoreOptions() {
-
-  function setCurrentChoice(result) {
-    document.querySelector("#instance").value = result.instance || "invidio.us";
-  }
-
-  function onError(error) {
-    console.log(`Error: ${error}`);
-  }
-
-  var getting = browser.storage.sync.get("instance");
-  getting.then(setCurrentChoice, onError);
-}
+const restoreOptions = async () => {
+  let { instance } = await browser.storage.sync.get("instance");
+  document.querySelector("#instance").value = result.instance || "invidio.us";
+};
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
