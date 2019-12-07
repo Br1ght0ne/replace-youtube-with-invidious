@@ -6,6 +6,7 @@
   "permissions": [
     "*://www.youtube.com/*",
     "*://youtu.be/*",
+    "storage",
     "webRequest",
     "webRequestBlocking"
   ],
@@ -13,6 +14,9 @@
     "gecko": {
       "id": "replace-youtube-with-invidious@brightone.space"
     }
+  },
+  "options_ui": {
+    "page": "settings/options.html"
   },
   "icons": {
     "32": "icons/icon.png"
