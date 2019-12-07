@@ -1,0 +1,8 @@
+#+TITLE: Changelog
+
+* [v0.2.0] - 2019-12-07
+** Added
+- Settings page (very work-in-progress), allowing to change the name of the
+  invidio.us instance to use (see [[https://github.com/omarroth/invidious/wiki/Invidious-Instances][invidio.us wiki]])
+* [v0.1.0] - 2019-11-21
+Initial release
