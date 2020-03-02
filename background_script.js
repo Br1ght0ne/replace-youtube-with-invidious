@@ -1,5 +1,7 @@
-const redirect = async request => {
-  let { instance } = await browser.storage.sync.get("instance");
+const browser = chrome;
+
+const redirect = request => {
+  let instance = browser.storage.sync.get("instance", obj => obj);
   let url = request.url.replace(
     /(www\.)?youtu(\.be|be\.com)/,
     instance || "invidio.us"

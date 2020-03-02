@@ -10,6 +10,11 @@
     "webRequest",
     "webRequestBlocking"
   ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d21cead9-cf11-43fd-b266-71a8f1d42f32}"
+    }
+  },
   "options_ui": {
     "page": "settings/options.html"
   },
