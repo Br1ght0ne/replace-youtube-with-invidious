@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Replace YouTube with invidio.us",
+  "description": "This extensions replaces all youtu.be and youtube.com links with their invidio.us conterpart.",
+  "version": "0.2.0",
+  "permissions": [
+    "*://www.youtube.com/*",
+    "*://youtu.be/*",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d21cead9-cf11-43fd-b266-71a8f1d42f32}"
+    }
+  },
+  "options_ui": {
+    "page": "settings/options.html"
+  },
+  "icons": {
+    "32": "icons/icon.png"
+  },
+  "background": {
+    "scripts": ["background_script.js"]
+  }
+}
